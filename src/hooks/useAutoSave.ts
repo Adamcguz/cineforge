@@ -1,7 +1,7 @@
 import { useCallback, useRef } from 'react';
 
 export function useAutoSave(saveFn: () => void, delay = 500) {
-  const timeoutRef = useRef<ReturnType<typeof setTimeout>>();
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
 
   const trigger = useCallback(() => {
     if (timeoutRef.current) {

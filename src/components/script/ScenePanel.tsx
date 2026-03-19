@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { ReactEditor } from 'slate-react';
 import { Editor, Element as SlateElement } from 'slate';
 import type { SceneListItem } from '@/hooks/useSceneList';
@@ -24,7 +23,7 @@ export function ScenePanel({ scenes, editor, visible, onToggle }: ScenePanelProp
         // Move cursor to the scene heading
         const point = Editor.start(editor, path);
         ReactEditor.focus(editor);
-        Editor.select(editor, point);
+        editor.select(point);
       } catch {
         // DOM node might not be rendered
       }

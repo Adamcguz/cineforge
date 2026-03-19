@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import type { BreakdownTag, BreakdownCategory } from '@/types';
+import type { BreakdownTag } from '@/types';
 import { generateId } from '@/lib/uuid';
 
 interface BreakdownState {
