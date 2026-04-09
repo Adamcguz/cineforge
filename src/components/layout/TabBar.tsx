@@ -1,6 +1,8 @@
 import { NavLink, useParams } from 'react-router-dom';
 
 const TABS = [
+  { path: 'research', label: 'Research' },
+  { path: 'beats', label: 'Beats' },
   { path: 'script', label: 'Script' },
   { path: 'breakdown', label: 'Breakdown' },
   { path: 'schedule', label: 'Schedule' },

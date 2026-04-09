@@ -6,3 +6,5 @@ export * from './shotlist';
 export * from './character';
 export * from './moodboard';
 export * from './budget';
+export * from './research';
+export * from './beat';

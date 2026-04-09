@@ -1,6 +1,8 @@
 import { createHashRouter, RouterProvider, Navigate } from 'react-router-dom';
 import { AppShell } from '@/components/layout/AppShell';
 import { DashboardPage } from '@/components/dashboard/DashboardPage';
+import { ResearchTab } from '@/components/research/ResearchTab';
+import { BeatsTab } from '@/components/beats/BeatsTab';
 import { ScriptTab } from '@/components/script/ScriptTab';
 import { BreakdownTab } from '@/components/breakdown/BreakdownTab';
 import { ScheduleTab } from '@/components/schedule/ScheduleTab';
@@ -18,7 +20,9 @@ const router = createHashRouter([
     path: '/project/:projectId',
     element: <AppShell />,
     children: [
-      { index: true, element: <Navigate to="script" replace /> },
+      { index: true, element: <Navigate to="research" replace /> },
+      { path: 'research', element: <ResearchTab /> },
+      { path: 'beats', element: <BeatsTab /> },
       { path: 'script', element: <ScriptTab /> },
       { path: 'breakdown', element: <BreakdownTab /> },
       { path: 'schedule', element: <ScheduleTab /> },
